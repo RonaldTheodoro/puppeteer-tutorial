@@ -5,8 +5,12 @@ describe('My first puppeteer test', () => {
     const browser = await puppeteer.launch({ headless: false })
     const page = await browser.newPage()
     await page.goto('http://example.com/')
-    await page.waitForTimeout(10000)
+    await page.waitForTimeout(3000)
     await page.waitForSelector('h1')
+    await page.reload()
+    await page.waitForTimeout(3000)
+    await page.waitForSelector('h1')
+
     await browser.close()
   })
 })
