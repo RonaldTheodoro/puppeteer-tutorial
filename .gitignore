@@ -123,5 +123,6 @@ dist
 # Ignore all local history of files
 .history
 .ionide
+*.code-workspace
 
 # End of https://www.toptal.com/developers/gitignore/api/node,visualstudiocode
