@@ -1,0 +1,17 @@
+{
+  "name": "puppeteer-tutorial",
+  "version": "1.0.0",
+  "description": "Automated software testing with Puppeteer",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "chai": "^4.3.0",
+    "mocha": "^8.2.1",
+    "prettier": "^2.2.1",
+    "puppeteer": "^7.0.1"
+  }
+}
