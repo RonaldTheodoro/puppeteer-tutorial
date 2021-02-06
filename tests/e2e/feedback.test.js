@@ -9,10 +9,7 @@ describe('Feedback test', () => {
   let page
 
   before(async () => {
-    browser = await puppeteer.launch({
-      headless: false,
-      sloMo: 10,
-    })
+    browser = await puppeteer.launch()
     page = await browser.newPage()
 
     await page.setDefaultTimeout(10000)

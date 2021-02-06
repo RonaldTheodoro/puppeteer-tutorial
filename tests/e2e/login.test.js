@@ -7,11 +7,7 @@ describe('Login test', () => {
   let page
 
   before(async () => {
-    browser = await puppeteer.launch({
-      headless: false,
-      sloMo: 10,
-      ignoreHTTPSErrors: true,
-    })
+    browser = await puppeteer.launch({ ignoreHTTPSErrors: true })
     page = await browser.newPage()
 
     await page.setDefaultTimeout(10000)

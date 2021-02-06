@@ -8,7 +8,7 @@ describe('My first puppeteer test', () => {
   let page
 
   before(async () => {
-    browser = await puppeteer.launch({ headless: false })
+    browser = await puppeteer.launch()
     page = await browser.newPage()
 
     await page.setDefaultTimeout(10000)
@@ -42,7 +42,6 @@ describe('My first puppeteer test', () => {
 
     await page.goto('http://zero.webappsecurity.com/index.html')
     await click(page, '#signin_button')
-    await page.waitForTimeout(2000)
     await shouldNotExist(page, '#signin_button')
   })
 })
