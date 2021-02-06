@@ -2,12 +2,30 @@ const puppeteer = require('puppeteer')
 const expect = require('chai').expect
 
 describe('My first puppeteer test', () => {
-  it('should launch the browser', async () => {
-    const browser = await puppeteer.launch({ headless: false })
-    const page = await browser.newPage()
+  let browser
+  let page
+
+  before(async () => {
+    browser = await puppeteer.launch({ headless: false })
+    page = await browser.newPage()
+
     await page.setDefaultTimeout(10000)
     await page.setDefaultNavigationTimeout(20000)
+  })
 
+  after(async () => {
+    await browser.close()
+  })
+
+  beforeEach(async () => {
+    // Runs before each test step
+  })
+
+  afterEach(async () => {
+    // Runs before each test step
+  })
+
+  it('should launch the browser', async () => {
     await page.goto('http://example.com/')
     await page.waitForXPath('//h1')
     const title = await page.title()
@@ -28,7 +46,5 @@ describe('My first puppeteer test', () => {
       hidden: true,
       timeout: 3000,
     })
-
-    await browser.close()
   })
 })
