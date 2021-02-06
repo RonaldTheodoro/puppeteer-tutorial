@@ -4,7 +4,7 @@
   "description": "Automated software testing with Puppeteer",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "./node_modules/mocha/bin/mocha --timeout 30000 ./tests"
   },
   "author": "",
   "license": "ISC",
