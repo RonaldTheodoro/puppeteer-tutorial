@@ -7,7 +7,10 @@
     "test": "./node_modules/mocha/bin/mocha --timeout 30000 ./tests",
     "test:example": "./node_modules/mocha/bin/mocha --timeout 30000 ./tests/example.test.js",
     "test:device": "./node_modules/mocha/bin/mocha --timeout 30000 ./tests/device.test.js",
-    "test:e2e": "./node_modules/mocha/bin/mocha --timeout 30000 ./tests/e2e/*.test.js"
+    "test:e2e": "./node_modules/mocha/bin/mocha --timeout 30000 ./tests/e2e/*.test.js",
+    "test:e2e:feedback": "./node_modules/mocha/bin/mocha --timeout 30000 ./tests/e2e/feedback.test.js",
+    "test:e2e:login": "./node_modules/mocha/bin/mocha --timeout 30000 ./tests/e2e/login.test.js",
+    "test:e2e:payment": "./node_modules/mocha/bin/mocha --timeout 30000 ./tests/e2e/payment.test.js"
   },
   "author": "",
   "license": "ISC",
