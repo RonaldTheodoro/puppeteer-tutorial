@@ -19,6 +19,14 @@ describe('My first puppeteer test', () => {
     expect(text).to.be.a('string', 'Example Domain')
     expect(count).to.equal(2)
 
+    await page.goto('http://zero.webappsecurity.com/index.html')
+    await page.type('#searchTerm', 'Hello there')
+    await page.keyboard.press('Enter', { delay: 10 })
+    await page.waitForSelector('h2')
+    console.log(await page.$eval('h2', (element) => element.textContent))
+
+    await page.waitForTimeout(5000)
+
     await browser.close()
   })
 })
