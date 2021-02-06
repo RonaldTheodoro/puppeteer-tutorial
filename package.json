@@ -13,8 +13,16 @@
     "test:e2e:payment": "./node_modules/mocha/bin/mocha --timeout 30000 ./tests/e2e/payment.test.js",
     "test:e2e:currency-exchange": "./node_modules/mocha/bin/mocha --timeout 30000 ./tests/e2e/currency-exchange.test.js"
   },
-  "author": "",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/RonaldTheodoro/puppeteer-tutorial.git"
+  },
+  "author": "ronald theodoro",
   "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/RonaldTheodoro/puppeteer-tutorial/issues"
+  },
+  "homepage": "https://github.com/RonaldTheodoro/puppeteer-tutorial#readme",
   "dependencies": {
     "chai": "^4.3.0",
     "mocha": "^8.2.1",
