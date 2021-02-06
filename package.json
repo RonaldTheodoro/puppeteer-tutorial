@@ -5,6 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "./node_modules/mocha/bin/mocha --timeout 30000 ./tests",
+    "test:example": "./node_modules/mocha/bin/mocha --timeout 30000 ./tests/example.test.js",
     "test:device": "./node_modules/mocha/bin/mocha --timeout 30000 ./tests/device.test.js"
   },
   "author": "",
