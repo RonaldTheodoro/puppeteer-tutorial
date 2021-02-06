@@ -9,6 +9,7 @@ describe('My first puppeteer test', () => {
     await page.setDefaultNavigationTimeout(20000)
 
     await page.goto('http://example.com/')
+    await page.waitForXPath('//h1')
     const title = await page.title()
     const url = await page.url()
     const text = await page.$eval('h1', (element) => element.textContent)
