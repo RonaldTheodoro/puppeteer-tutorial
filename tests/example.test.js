@@ -5,11 +5,10 @@ describe('My first puppeteer test', () => {
     const browser = await puppeteer.launch({ headless: false, slowMo: 10 })
     const page = await browser.newPage()
     await page.goto('http://example.com/')
-    const title = await page.title()
-    const url = await page.url()
+    const text = await page.$eval('h1', (element) => element.textContent)
 
-    console.log(`title: ${title}`)
-    console.log(`url: ${url}`)
+    console.log(`text: ${text}`)
+
     await browser.close()
   })
 })
