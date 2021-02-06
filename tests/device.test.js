@@ -36,5 +36,4 @@ describe('Device Emulation', () => {
     await page.goto('http://www.example.com')
     await page.waitForTimeout(5000)
   })
-
 })
