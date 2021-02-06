@@ -21,12 +21,13 @@ describe('My first puppeteer test', () => {
     expect(count).to.equal(2)
 
     await page.goto('http://zero.webappsecurity.com/index.html')
-    await page.type('#searchTerm', 'Hello there')
-    await page.keyboard.press('Enter', { delay: 10 })
-    await page.waitForSelector('h2')
-    console.log(await page.$eval('h2', (element) => element.textContent))
-
-    await page.waitForTimeout(5000)
+    await page.waitForSelector('#signin_button')
+    await page.click('#signin_button')
+    await page.waitForFunction(() => !document.querySelector('#signin_button'))
+    await page.waitForSelector('#signin_button', {
+      hidden: true,
+      timeout: 3000,
+    })
 
     await browser.close()
   })
