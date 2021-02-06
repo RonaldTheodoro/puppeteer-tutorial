@@ -6,7 +6,8 @@ describe('Device Emulation', () => {
 
   before(async () => {
     browser = await puppeteer.launch({ headless: false, sloMo: 10 })
-    page = await browser.newPage()
+    const context = await browser.createIncognitoBrowserContext()
+    page = await context.newPage()
 
     await page.setDefaultTimeout(10000)
     await page.setDefaultNavigationTimeout(20000)
