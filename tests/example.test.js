@@ -5,6 +5,9 @@ describe('My first puppeteer test', () => {
   it('should launch the browser', async () => {
     const browser = await puppeteer.launch({ headless: false })
     const page = await browser.newPage()
+    await page.setDefaultTimeout(10000)
+    await page.setDefaultNavigationTimeout(20000)
+
     await page.goto('http://example.com/')
     const title = await page.title()
     const url = await page.url()
